@@ -24,7 +24,7 @@ def menu(calendar_manager):
 
         if option == '1': 
             os.system('clear')
-            print('MONTHLY CALENDAR')
+            print('WEEKLY CALENDAR')
 
             month = input('Month: ')
             year = input('Year: ')
@@ -44,13 +44,14 @@ def menu(calendar_manager):
             calendar = calendar_manager.weekly(month, year, week)
 
             if filepath == "":
+                print('\n')
                 print(calendar)
             else:
                 stringToFile(calendar, filepath)
 
         elif option == '2':
             os.system('clear')
-            print('WEEKLY CALENDAR')
+            print('MONTLY CALENDAR')
 
             month = input('Month: ')
             year = input('Year: ')
@@ -78,13 +79,14 @@ def menu(calendar_manager):
             calendar = calendar_manager.montly(month, year, style)
 
             if filepath == "":
+                print('\n')
                 print(calendar)
             else:
                 stringToFile(calendar, filepath)
 
         elif option == '3':
             os.system('clear')
-            print('MONTLY CALENDAR')
+            print('YEARLY CALENDAR')
 
             year = input('Year: ')
             style = input('Formatted (y/n): ')
@@ -110,6 +112,7 @@ def menu(calendar_manager):
             calendar = calendar_manager.yearly(year, style)
 
             if filepath == "":
+                print('\n')
                 print(calendar)
             else:
                 stringToFile(calendar, filepath)
